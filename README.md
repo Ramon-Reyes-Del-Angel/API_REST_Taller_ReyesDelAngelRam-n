@@ -133,13 +133,14 @@ Los navegadores solo soportan GET directamente. Para otros métodos HTTP, usar h
 
 Thunder Client (VS Code)
 
-Postman
+- Postman
 
-Insomnia
+- Insomnia
 
-Yaak
+- Yaak
 
-ApiDog
+- ApiDog
 
 Repositorio
+
 
