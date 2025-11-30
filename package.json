@@ -1,15 +1,23 @@
 {
-  "name": "proyecto2",
+  "name": "apis-rest",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ramon-Reyes-Del-Angel/API_REST_Taller_ReyesDelAngelRam-n.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ramon-Reyes-Del-Angel/API_REST_Taller_ReyesDelAngelRam-n/issues"
+  },
+  "homepage": "https://github.com/Ramon-Reyes-Del-Angel/API_REST_Taller_ReyesDelAngelRam-n#readme",
+  "description": "",
   "dependencies": {
     "express": "^5.1.0",
     "nodemon": "^3.1.11"
