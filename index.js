@@ -1,17 +1,23 @@
-// 1. Importar express
+// 1. Importar Express
 const express = require('express');
- 
-// 2. Creamos instancia de la aplicacion (nuestro servidor)
+
+// 2. Crear instancia de la aplicación (nuestro servidor)
 const app = express();
-app.use(express.json()); // Middleware para parsear JSON
- 
-const PORT = 3000; // Puerto donde escuchara el servidor
- 
-// Definimos una ruta para el endpoint raiz
+
+// 3. Middleware
+app.use(express.json()); // 3.1 Middleware para parsear JSON en las peticiones
+
+// 4. Configuración del puerto
+const PORT = 3000; // 4.1 Puerto donde escuchará el servidor
+
+// 5. Rutas
+
+// 5.1 Endpoint raíz
 app.get('/', (req, res) => { // req: request, res: response
-    res.send("¡Hola Mundo desde Express!. Este es mi primer servidor web.")
+    res.send("¡Hola Mundo desde Express!. Este es mi primer servidor web.");
 });
- 
+
+// 5.2 Endpoint saludo
 app.get('/saludo', (req, res) => {
     res.json({
         mensaje: "Hola",
@@ -19,28 +25,29 @@ app.get('/saludo', (req, res) => {
         fecha: new Date()
     });
 });
- 
-// Mock de datos
+
+// 5.3 Mock de datos de usuarios
 const usuarios = [
     { id: 1, nombre: "Jorge", edad: 28 },
     { id: 2, nombre: "Martha", edad: 34 },
     { id: 3, nombre: "Paola", edad: 45 }
 ];
- 
+
+// 5.4 Endpoint POST para agregar usuarios
 app.post('/user', (req, res) => {
     /**
-     * Estrucura esperada del cuerpo de la peticion
+     * Estructura esperada del cuerpo de la petición:
      * nombre: String
      * edad: Number
      */
     const cuerpo = req.body;
- 
+
     const usuario = {
         id: usuarios.length + 1,
         nombre: cuerpo.nombre,
         edad: cuerpo.edad
-    }
- 
+    };
+
     usuarios.push(usuario);
     
     res.json({
@@ -49,8 +56,8 @@ app.post('/user', (req, res) => {
         usuarios_actualizdos: usuarios
     });
 });
- 
-// 3. Iniciamos el servidor
+
+// 6. Iniciar servidor
 app.listen(PORT, () => {
     console.log('Servidor corriendo exitosamente en http://localhost:' + PORT);    
 });
