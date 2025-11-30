@@ -3,7 +3,7 @@ Descripción
 
 Este proyecto es un servidor web básico desarrollado con Node.js y Express, que permite manejar usuarios mediante endpoints GET y POST. Incluye ejemplos de rutas, manejo de JSON, y persistencia temporal de datos en memoria (mock de usuarios). Es ideal como introducción al desarrollo de APIs REST en Node.js.
 
-Tecnologías utilizadas
+**Tecnologías utilizadas**
 
 Node.js: Entorno de ejecución para JavaScript.
 
@@ -11,21 +11,21 @@ Express: Framework minimalista para crear servidores web.
 
 Nodemon: Herramienta para reiniciar automáticamente el servidor durante el desarrollo.
 
-Instalación y configuración
+**Instalación y configuración**
 
-Abrir VS Code y abrir o crear una carpeta para el proyecto.
+- Abrir VS Code y abrir o crear una carpeta para el proyecto.
 
-Inicializar proyecto:
+- Inicializar proyecto:
 
 npm init -y
 
 
-Instalar dependencias:
+- Instalar dependencias:
 
 npm install express nodemon
 
 
-Configurar script de desarrollo en package.json:
+- Configurar script de desarrollo en package.json:
 
 "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -33,7 +33,7 @@ Configurar script de desarrollo en package.json:
 }
 
 
-Crear archivo principal index.js y agregar el código del servidor (ver sección de código abajo).
+- Crear archivo principal index.js y agregar el código del servidor (ver sección de código abajo).
 
 Código del servidor (index.js)
 // 1. Importar Express
@@ -95,7 +95,7 @@ app.listen(PORT, () => {
     console.log('Servidor corriendo exitosamente en http://localhost:' + PORT);    
 });
 
-Ejecución del proyecto
+**Ejecución del proyecto**
 
 Abrir la terminal en VS Code.
 
@@ -106,9 +106,9 @@ npm run dev
 
 Abrir un navegador o herramienta de pruebas como Thunder Client y visitar:
 
-http://localhost:3000/ → mensaje de bienvenida.
+- http://localhost:3000/ → mensaje de bienvenida.
 
-http://localhost:3000/saludo → JSON con saludo.
+- http://localhost:3000/saludo → JSON con saludo.
 
 Hacer peticiones POST a /user enviando JSON con:
 
@@ -117,7 +117,7 @@ Hacer peticiones POST a /user enviando JSON con:
     "edad": 30
 }
 
-Próximos pasos / mejoras
+**Próximos pasos / mejoras**
 
 Implementar PUT y PATCH para actualizar usuarios usando query params.
 
@@ -127,7 +127,7 @@ Conectar con una base de datos real (MongoDB, MySQL, etc.) en lugar del mock.
 
 Añadir validaciones y manejo de errores para las peticiones.
 
-Notas
+**Notas**
 
 Los navegadores solo soportan GET directamente. Para otros métodos HTTP, usar herramientas como:
 
@@ -142,5 +142,5 @@ Thunder Client (VS Code)
 - ApiDog
 
 Repositorio
-
+https://github.com/Ramon-Reyes-Del-Angel/API_REST_Taller_ReyesDelAngelRam-n.git
 
